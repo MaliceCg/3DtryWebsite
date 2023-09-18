@@ -7,9 +7,16 @@ Key Features
 - Interactive Elements: The website incorporates interactive elements that allow users to explore and interact with the 3D model. This includes features like rotation, zooming.
 - Responsive Design: The website is designed to be responsive, ensuring an optimal viewing experience on various devices, from desktop computers to mobile phones.
 
-To run this project, 
-use npm run build and then npm run dev.
 
+To run this project :
+# Install dependencies (only the first time)
+npm install
+
+# Run the local server at localhost:8080
+npm run dev
+
+# Build for production in the dist/ directory
+npm run build
 Dependencies
 
 Three.js: The core library for 3D graphics in the browser.
