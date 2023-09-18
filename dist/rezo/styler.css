@@ -1,0 +1,368 @@
+@import url('https://fonts.cdnfonts.com/css/maybe-but-not-always');
+* {
+    transition: all 0.3s ease-in-out;
+    font-family: "Maybe But Not Always";
+  }
+ 
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Montserrat, Helvetica, sans-serif;
+    background: #f4f4f4;
+  }
+  
+  nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: #fafafa;
+    box-shadow: inset 0px -1px 0px #c5c5c6;
+    z-index: 9999;
+  }
+  
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  
+  
+  .nav-icon img {
+    width: 50px;
+  
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .navlinks-container a {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #414141;
+    position: relative;
+  }
+  .navlinks-container a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform: scale(0);
+    transform-origin: left;
+    background: #333;
+    transition: transform 0.3s ease-out;
+  }
+  .navlinks-container a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  
+  
+  .user-toggler {
+    display: none;
+  }
+  
+  @media (max-width: 900px) {
+    nav {
+      padding: 15px 20px;
+      position: relative;
+    }
+  
+    /* nav */
+    .nav-icon {
+      order: 2;
+      margin: 0 auto;
+    }
+  
+   
+    .main-navlinks {
+      order: 1;
+      width: auto;
+    }
+  
+    /* hamburger */
+    .hamburger {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      background: #fafafa;
+      align-items: center;
+      position: relative;
+    }
+  
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #333;
+      position: absolute;
+      pointer-events: none;
+      transition: opacity 0.3s 0.15s ease-out;
+    }
+    .hamburger span:nth-child(1),
+    .hamburger span:nth-child(3) {
+      transition: transform 0.3s ease-out;
+    }
+  
+    .hamburger span:nth-child(1) {
+      transform: translateY(7px);
+    }
+    .hamburger span:nth-child(3) {
+      transform: translateY(-7px);
+    }
+  
+    .hamburger.open span:nth-child(1) {
+      transform: translate(0) rotate(135deg);
+    }
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+      transition: opacity 0s ease-out;
+    }
+    .hamburger.open span:nth-child(3) {
+      transform: translate(0) rotate(-135deg);
+    }
+  
+    .navlinks-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      background: #fafafa;
+      top: 100%;
+      left: 0;
+      transform: translate(-100%);
+      height: 100vh;
+      padding: 15px 50px 15px 20px;
+      border-right: 1px solid #c5c5c6;
+    }
+    .open {
+      transform: translate(0%);
+    }
+  
+    .navlinks-container a {
+      font-size: 18px;
+      margin: 10px 0px;
+    }
+  
+    .user-toggler {
+      display: block;
+      cursor: pointer;
+      border: none;
+    }
+  
+    .user-toggler img {
+      width: 20px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .nav-icon img {
+      width: 40px;
+    }
+  
+  }
+a {
+  text-decoration: none;
+}
+
+  .container a {
+    color: deeppink;
+  }
+
+a {
+  text-decoration: none;
+}
+
+  .container a {
+    color: deeppink;
+  }
+
+  body{
+    background-color: #00d5ff;
+  }
+
+  svg>g>g {
+    cursor: pointer;
+  }
+
+svg {
+    margin-left:30% ;
+    margin-top: 5%;
+}
+.montpellier
+{
+    fill: blue;
+}
+  #divVideo{
+    display: none;
+    position: fixed;
+    margin: auto;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.75s;
+    animation-name: growup;
+    animation-duration: 0.25s;
+    background-color: rgba(255, 20, 145, 0.643);
+  }
+  
+  #video{
+    max-width: 80%;
+    max-height: 80vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+      position: fixed;
+    transition-duration: 1s;
+    z-index: 999;
+  }
+  
+  #video_close{
+    position: fixed;
+    fill: white;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3.5vw;
+    width: 0;
+    cursor: pointer;
+    transition-duration: 0.25s;
+  }
+  
+  @keyframes growup {
+    from {
+      width: 0;
+      height: 0;
+    }
+    to {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  
+  @keyframes growdown {
+    from {
+      width: 100vw;
+      height: 100vh;
+    }
+    to {
+      width: 0;
+      height: 0;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .footer-basic {
+    padding:40px 0;
+    background-color:#00d5ff;
+    color:deeppink;
+  }
+  
+  
+  
+ 
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid deeppink;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:deeppink;
+    margin-bottom:0;
+    font-family: "Maybe But Not Always";
+  }
+  @media(max-width:500px){
+    svg {
+      margin-left:10% ;
+      margin-top: 25%;
+      width: 150%;
+  }
+  .footer-basic {
+    padding:-30px 0;
+    background-color:#00d5ff;
+    color:rgb(247, 239, 243);
+  }
+  
+  
+  
+ 
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid deeppink;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:deeppink;
+    margin-bottom:0;
+    font-family: "Maybe But Not Always";
+  }
+  }

@@ -1,0 +1,125 @@
+@import url('https://fonts.cdnfonts.com/css/maybe-but-not-always');
+* {
+    transition: all 0.3s ease-in-out;
+    font-family: "Maybe But Not Always";
+  }
+  .container {
+    clear: both;
+    overflow: auto;
+    
+  }
+  .container .logo .responsive {
+    height: auto;
+    width:10%
+  }
+  .logo img {
+    float: left;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+ 
+  .navbar {
+    position: relative;
+   margin-top: 2%;
+   
+}
+
+#navlist {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    
+}
+
+#navlist li {
+    flex: auto;
+    text-align: center;
+    padding: 1.6em;
+    font-size: 18px;
+    color: deeppink;
+    
+}
+
+#navlist li:hover {
+    color:orange;
+}
+
+#toggle-nav {
+    display: none;
+    margin: auto;
+    cursor: pointer;
+}
+
+@media all and ( max-width: 500px ) { 
+
+    .navbar {
+        padding: 1.6em;
+    }
+
+    #navlist {
+        flex-direction: column;
+        display: none;
+    }
+
+    #toggle-nav {
+        display: block;
+        color: white;
+    }
+
+}
+a {
+  text-decoration: none;
+}
+
+  .container a {
+    color: deeppink;
+  }
+  body{
+    background-color: #00d5ff;
+  }
+
+
+
+  
+  .footer-basic {
+    padding:40px 0;
+    background-color:#00d5ff;
+    color:deeppink;
+  }
+  
+  
+  
+ 
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid deeppink;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:deeppink;
+    margin-bottom:0;
+    font-family: "Maybe But Not Always";
+  }
