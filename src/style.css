@@ -1,0 +1,219 @@
+@import url('https://fonts.cdnfonts.com/css/maybe-but-not-always');
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+
+.container {
+    clear: both;
+    overflow: auto;
+    position: absolute;
+    
+  }
+ 
+  .logo img {
+    float: left;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+
+
+
+
+.point
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* pointer-events: none; */
+}
+
+.point .label
+{    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    transform: scale(0, 0);
+    transition: transform 0.3s;
+    cursor: alias;
+   
+
+}
+.point:hover .label{
+    color:#00c3ff;
+   background-color: #FFFFFF;
+}
+
+.point .text {
+    position:unset;
+    top: 30px;
+    left: -120px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 4px;
+    background: #ffffffd9;
+    border: O;
+    color: #00c3ff;
+    line-height: 1.3em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    opacity: 0;
+  }
+
+
+
+.point:hover .text
+{
+    opacity: 1;
+}
+
+.point.visible .label
+{
+    transform: scale(1, 1);
+}
+
+.e {
+    position: absolute;
+    top: 50%;
+    left:50%;
+}
+
+
+
+footer {
+    top:90%;
+    display: grid;
+    left: 45%;
+    color:deeppink;
+    position: absolute;
+  }
+  
+
+  
+ 
+  
+footer.social {
+    text-align:center;
+    padding-bottom:25px;
+   
+  }
+  
+footer .social  > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid deeppink;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  footer .social > a:hover {
+    opacity:0.9;
+  }
+  
+  footer .social .copyright {
+    
+    font-family:'Maybe But Not Always';
+    text-align:center;
+    font-size:7px;
+    color:deeppink;
+    
+    text-align: center;
+  }
+
+  @media(max-width:500px){
+
+
+
+
+.container {
+  clear: both;
+  overflow: auto;
+  position: absolute;
+  
+}
+
+.logo img {
+  float: left;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 10%;
+}
+
+footer {
+  top:90%;
+  display: grid;
+  left: 35%;
+  color:deeppink;
+  position: absolute;
+}
+
+
+
+
+
+footer.social {
+  text-align:center;
+  padding-bottom:25px;
+ 
+}
+
+footer .social  > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid deeppink;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+footer .social > a:hover {
+  opacity:0.9;
+}
+
+footer .social .copyright {
+  
+  font-family:'Maybe But Not Always';
+  text-align:center;
+  font-size:7px;
+  color:deeppink;
+  padding-top: 10%;
+  text-align: center;
+}
+  }
